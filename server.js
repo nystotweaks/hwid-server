@@ -17,7 +17,7 @@ function saveDB(data) {
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
 }
 
-app.post("/hwid", (req, res) => {
+app.post("/verify", (req, res) => {
     const { key, hwid } = req.body;
 
     let db = loadDB();
